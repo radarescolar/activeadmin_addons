@@ -68,12 +68,6 @@ module ActiveAdminAddons
       model.model_name.param_key
     end
 
-    # attachment_column :foto
-    # attachment_column :foto, style: :hola
-    # attachment_column "Mi Foto", :foto
-    # attachment_column "Mi Foto", :foto, {}
-    # attachment_column :foto do
-    # end
     def attribute
       @attribute ||= has_label? ? args[1] : args[0]
     end

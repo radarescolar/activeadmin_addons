@@ -5,7 +5,6 @@ module ActiveAdminAddons
       require 'sassc-rails'
       require "xdan-datetimepicker-rails"
       require "require_all"
-      require "active_material"
 
       initializer "initialize addons" do |app|
         require_rel "support"

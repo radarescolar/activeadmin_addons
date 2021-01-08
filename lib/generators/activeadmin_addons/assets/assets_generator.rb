@@ -29,24 +29,16 @@ module ActiveadminAddons
 
       def js_assets
         to_add = "//= require activeadmin_addons/all\n"
-        to_add += "//= require active_material\n" if options['theme'] == "material"
         to_add
       end
 
       def coffee_assets
         to_add = "#= require activeadmin_addons/all\n"
-        to_add += "#= require active_material\n" if options['theme'] == "material"
         to_add
       end
 
       def css_assets
-        if options['theme'] == "material"
-          to_add = "$am-theme-primary: #342e48;\n"
-          to_add += "@import 'activeadmin_addons/all';\n"
-          to_add + "@import 'activeadmin_addons/material';\n"
-        else
-          "@import 'activeadmin_addons/all';\n"
-        end
+        "@import 'activeadmin_addons/all';\n"
       end
     end
   end
